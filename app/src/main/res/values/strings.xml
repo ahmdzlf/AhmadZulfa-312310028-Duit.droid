@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DuitDroid</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="kategori_array">
+        <item>Makanan</item>
+        <item>Transportasi</item>
+        <item>Belanja</item>
+        <!-- Tambahkan kategori lain sesuai kebutuhan -->
+    </string-array>
+
+    <string name="default_web_client_id">724568337557</string>
+</resources>

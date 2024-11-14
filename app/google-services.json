@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "724568337557",
+    "project_id": "comduitdroid",
+    "storage_bucket": "comduitdroid.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724568337557:android:31b0aeffb0bd9110c0ff9c",
+        "android_client_info": {
+          "package_name": "com.azarcorp.duitdroid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoFTSug_Q5XPWXJ89j_JMQPYzHHKOZREk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
