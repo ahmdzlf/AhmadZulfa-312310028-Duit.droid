@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.azarcorp.duitdroid">
 
-    <!-- Permissions should be declared outside of the <application> tag -->
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:remove="@targetSdkVersion>=29" /> <!-- Hanya untuk SDK di bawah 29 -->
+        tools:remove="@targetSdkVersion>=29" /> <!-- Untuk SDK di bawah 29 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -22,12 +22,20 @@
         android:theme="@style/Theme.DuitDroid"
         tools:targetApi="31">
 
-        <!-- Metadata for Firebase -->
+        <!-- Metadata untuk Firebase -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_launcher_background" />
 
-        <!-- SplashActivity as the main entry activity -->
+        <!-- Metadata untuk Google Sign-In -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.auth.api.signin.default_web_client_id"
+            android:value="@string/default_web_client_id" />
+
+        <!-- Splash Screen Activity -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -39,11 +47,43 @@
         </activity>
 
         <!-- Login Activity -->
-        <activity android:name=".login.LoginActivity"
-            android:exported="true">
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DuitDroid.NoActionBar" />
+
+        <!-- Sign Up Activity -->
+
+        <!-- Forgot Password Activity -->
+
+        <!-- About Activity -->
+        <activity
+            android:name=".About_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.DuitDroid.NoActionBar" />
+
+        <!-- Contact Us Activity -->
+        <activity
+            android:name=".ContactUs_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.DuitDroid.NoActionBar" />
+
+        <!-- Main Menu/Home Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DuitDroid">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
 
-        <!-- Activity for adding expenses -->
+        <!-- Profile Activity -->
+        <activity
+            android:name=".Profile_Activity"
+            android:theme="@style/Theme.DuitDroid.NoActionBar" />
+
+        <!-- Activity untuk tambah pengeluaran -->
         <activity
             android:name=".AddPengeluaran.AddPengeluaranActivity"
             android:theme="@style/Theme.DuitDroid.NoActionBar"
@@ -54,7 +94,7 @@
                 android:value="" />
         </activity>
 
-        <!-- Activity for adding income -->
+        <!-- Activity untuk tambah pemasukan -->
         <activity
             android:name=".AddPemasukan.AddPemasukanActivity"
             android:theme="@style/Theme.DuitDroid.NoActionBar"
@@ -65,16 +105,5 @@
                 android:value="" />
         </activity>
 
-        <!-- MainActivity as the main app screen -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.DuitDroid" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
     </application>
-
 </manifest>

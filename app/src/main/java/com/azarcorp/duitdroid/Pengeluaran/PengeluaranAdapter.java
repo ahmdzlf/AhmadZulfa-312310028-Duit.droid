@@ -1,6 +1,7 @@
 package com.azarcorp.duitdroid.Pengeluaran;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,7 @@ public class PengeluaranAdapter extends RecyclerView.Adapter<PengeluaranAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView tvPrice, tvNote, tvDate;
-        public ImageView ivDelete;
+        public ImageView ivDelete, ivPhoto;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -67,6 +68,7 @@ public class PengeluaranAdapter extends RecyclerView.Adapter<PengeluaranAdapter.
             tvNote = itemView.findViewById(R.id.tvNote);
             tvDate = itemView.findViewById(R.id.tvDate);
             ivDelete = itemView.findViewById(R.id.ivDelete);
+            ivPhoto = itemView.findViewById(R.id.ivPhoto);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -95,6 +97,13 @@ public class PengeluaranAdapter extends RecyclerView.Adapter<PengeluaranAdapter.
 
             String date = item.tanggal;
             tvDate.setText(date);
+
+            // Menggunakan fotoUri sebagai pengganti fotoPath
+            if (item.fotoUri != null && !item.fotoUri.isEmpty()) {
+                ivPhoto.setImageURI(Uri.parse(item.fotoUri));
+            } else {
+                ivPhoto.setImageResource(R.drawable.ic_foto); // default image
+            }
         }
     }
 
@@ -103,5 +112,4 @@ public class PengeluaranAdapter extends RecyclerView.Adapter<PengeluaranAdapter.
 
         void onDelete(ModelDatabase modelDatabase);
     }
-
 }

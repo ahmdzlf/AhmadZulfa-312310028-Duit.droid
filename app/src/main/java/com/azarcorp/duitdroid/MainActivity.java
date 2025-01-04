@@ -1,11 +1,13 @@
 package com.azarcorp.duitdroid;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.azarcorp.duitdroid.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
         setIdLayout();
         setInitLayout();
+
+        // Find the profile icon by its ID
+        ImageView profileIcon = findViewById(R.id.profile_icon);
+
+        // Set a click listener on the profile icon
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the ProfileActivity
+                Intent intent = new Intent(MainActivity.this, Profile_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     private void setIdLayout() {

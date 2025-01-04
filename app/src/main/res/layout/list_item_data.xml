@@ -11,7 +11,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="346dp">
+        android:layout_height="209dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivPhoto"
                 android:layout_width="match_parent"
-                android:layout_height="204dp"
+                android:layout_height="101dp"
                 android:layout_marginTop="8dp"
                 android:scaleType="centerCrop" />
 

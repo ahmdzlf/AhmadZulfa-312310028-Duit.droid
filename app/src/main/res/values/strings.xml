@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">DuitDroid</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="kategori_array">
@@ -9,6 +8,10 @@
         <item>Belanja</item>
         <!-- Tambahkan kategori lain sesuai kebutuhan -->
     </string-array>
-
-    <string name="default_web_client_id">724568337557</string>
+    
+    <string name="app_logo">App Logo</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

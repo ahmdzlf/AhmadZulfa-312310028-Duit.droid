@@ -14,5 +14,8 @@
     <color name="custom5">#A8DFF1</color>
     <color name="custom6">#142029</color>
     <color name="bgbtn">#303030</color>
+    <color name="input_text">#000000</color>
+    <color name="edit_bg">#BDBDBD</color>
+    <color name="gray">#BDBDBD</color>
 
 </resources>

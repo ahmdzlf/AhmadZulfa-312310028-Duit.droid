@@ -12,7 +12,20 @@
           "package_name": "com.azarcorp.duitdroid"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "724568337557-5ai3hhb445p6mmo4hmnrb5p0tgnsu4i1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.azarcorp.duitdroid",
+            "certificate_hash": "ab724c2e126f2a4cbfa913185b9336f0bc21b7b9"
+          }
+        },
+        {
+          "client_id": "724568337557-elg1ise5bl0oi1801i32cu19oulivieo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCoFTSug_Q5XPWXJ89j_JMQPYzHHKOZREk"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724568337557-elg1ise5bl0oi1801i32cu19oulivieo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
